@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Online Voting System - Registration</title>
+        <link rel="stylesheet" href="../css/stylesheet.css">
+    </head>
+    <body>
+        <style>
+            .address{
+                overflow: auto;
+                
+            }
+            #imagepart{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+                
+            }
+            #rolepart{
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                width: 30%;
+            }
+            #role{
+                padding: 9px;
+                border-radius: 3px;
+            }
+            #registerbtn{
+                padding: 9px;
+                border-radius: 3px;
+                background-color: rgb(159, 221, 83);
+                color: black ;
+                font-size: 13px;
+            }
+        </style>
+        <center>
+        <div id="headerSection">
+            <h1>Online Voting system</h1>
+        </div>
+        <hr>
+        <div id="bodySection">
+        <h2>Registration</h2>
+        <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+            Name: &nbsp; &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="text" name="name" placeholder="Enter your name"><br><br>
+            Mobile Number: &nbsp; <input type="number" name="mobile" placeholder="Enter mobilenumber"><br><br>
+            Password: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="password" name="password" placeholder="Enter Password"><br><br>
+            Confirm password: <input type="passsword" name="cpassword" placeholder="Confirm password"><br><br>
+            Address: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input class="address" type="text" name="address" placeholder="Enter address" ><br><br>
+            <br>
+                <div id="imagepart">
+                    Upload image: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input  type="file" name="photo"><br><br>
+                </div>
+            <br>
+            
+            <div id="rolepart">
+            Select your Role: <select name="role" id="role" >
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select><br><br>
+            </div><br>
+            <button id="registerbtn">Register</button><br><br>
+            Already user?<a href="../index.html">Login here</a>
+        </form>
+        </div>
+        </center>
+    </body>
+</html>
